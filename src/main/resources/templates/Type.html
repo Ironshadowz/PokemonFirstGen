@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul data-th-object="${typeList}">
+        <li data-th-each="g:${typeList}" data-th-object="${g}">
+            <a data-th-href="@{/home/{type}(type=${g})}" data-th-text="${g}"></a>
+        </li>
+    </ul>
+</body>
+</html>

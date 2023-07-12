@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><span data-th-text="${type}"></span> Pokemons</h1>
+    <div></div>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Image</td>
+                <td>Types</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="pokemon : ${types}" data-th-object="${pokemon}">
+                <td data-th-text="*{id}"></td>
+                <td data-th-text="*{name}"></td>
+                <td>
+                    <img data-th-src="*{img}" data-th-alt="*{name}">
+                </td>
+                <td data-th-each="type : *{type}">
+                    <p data-th-text="${type}"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -6,10 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Please select type of Pokemon</h1>
     <ul data-th-object="${typeList}">
         <li data-th-each="g:${typeList}" data-th-object="${g}">
             <a data-th-href="@{/home/{type}(type=${g})}" data-th-text="${g}"></a>
         </li>
     </ul>
+    <form data-th-action="@{/home/id}" method="get">
+        <label for="id">ID here</label>
+        <input type="text" name="id">
+        <input type="submit" value="submit">
+    </form>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1><span data-th-text="${type}"></span> Pokemons</h1>
+    <h1>It's <span data-th-text="${pokemon.name}"></span></h1>
     <div></div>
     <table>
         <thead>
@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr data-th-each="pokemon : ${types}" data-th-object="${pokemon}">
+            <tr data-th-object="${pokemon}">
                 <td data-th-text="*{id}"></td>
                 <td data-th-text="*{name}"></td>
                 <td>

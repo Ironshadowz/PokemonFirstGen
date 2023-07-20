@@ -18,5 +18,5 @@ public class Pokemon
     private String name;
     private String img;
     private List<String> type;
-    private HashMap<String , String> stats;
+    private Stats stats;
 }
